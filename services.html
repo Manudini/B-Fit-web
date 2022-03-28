@@ -1,0 +1,373 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Services</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="main_stylesheet.css" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.container {
+			width: 100%;
+			height: 100vh;
+			background-image: url(images/bg.png);
+			background-position: center;
+			background-size: cover;
+			padding-left: 8%;
+			padding-right: 8%;
+			box-sizing: border-box;
+		}
+
+		.navbar {
+			height: 12%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			width: 200px;
+			cursor: pointer;
+			margin-top: 100px;
+		}
+
+		nav {
+			flex: 1;
+			text-align: right;
+		}
+
+		nav ul li {
+			list-style: none;
+			display: inline-block;
+			margin-left: 60px;
+		}
+
+		nav ul li a {
+			text-decoration: none;
+			color: #fff;
+			font-size: 13px;
+		}
+
+		.row {
+			display: flex;
+			height: 88%;
+			align-items: center;
+		}
+
+		.col {
+			flex-basis: 50%;
+		}
+
+		h1 {
+			color: #FAED26;
+			font-size: 100px;
+		}
+
+		.card {
+			width: 150px;
+			height: 180px;
+			display: inline-block;
+			border-radius: 10px;
+			padding: 15px 25px;
+			box-sizing: border-box;
+			cursor: pointer;
+			margin: 10px 15px;
+			background-position: center;
+			background-size: cover;
+			transition: transform 0.5s;
+		}
+
+		.card1 {
+			background-image: url(images/Equipment.jpg);
+		}
+
+		.card2 {
+			background-image: url(images/safety.jpg);
+		}
+
+		.card3 {
+			background-image: url(images/trainers.jpg);
+		}
+
+		.card4 {
+			background-image: url(images/zumba.jpg);
+		}
+
+		.card5 {
+			background-image: url(images/123.jpg);
+		}
+
+		.card:hover {
+			transform: translateY(-10px)
+		}
+
+		.space {
+			text-align: center;
+			width: 100%;
+			height: 80px;
+		}
+
+		.Big_img {
+			display: block;
+			width: 50%;
+			height: 500px;
+			background-color: #6B6E70;
+			margin-left: 40px;
+		}
+
+		.details {
+			width: 100%;
+			height: 80vh;
+			text-align: center;
+			display: flex;
+			padding-top: 100px;
+			padding-bottom: 100px;
+			margin: auto;
+		}
+
+		.details_text {
+			flex-basis: 75%;
+			padding-left: 10px;
+		}
+
+		.lit {
+			background-color: #e9eaeb;
+		}
+
+		p {
+			color: #000;
+			font-family: Oswald;
+			font-size: 18px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h3 {
+			color: #000;
+			margin-top: 40px;
+			font-family: Oswald;
+			padding: 30px 30px;
+			font-size: 48px;
+			align-content: center;
+			position: center;
+		}
+
+		h4 {
+			color: #000;
+			margin-top: 40px;
+			font-family: Oswald;
+			padding: 30px 30px;
+			font-size: 32px;
+			align-content: center;
+		}
+
+		.dropbtn {
+			background-color: #474B4F;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			border-radius: 10px;
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			min-width: 80px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			cursor: pointer;
+		}
+
+		.dropdown-content a {
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+			cursor: pointer;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown:hover .dropbtn {
+			background-color: #222629;
+		}
+
+		a {
+
+			color: white;
+			font-size: 16px;
+			border: none;
+
+		}
+	</style>
+</head>
+<script type="text/javascript">
+
+	function blackBg() {
+		document.bgColor = "#222629";
+	}
+	function WhiteBg() {
+		document.bgColor = "#ddd";
+	}
+	function blackTexT() {
+		document.getElementById("MyP").style.color = "black";
+		document.getElementById("MyP1").style.color = "black";
+		document.getElementById("MyP2").style.color = "black";
+		document.getElementById("MyP3").style.color = "black";
+		document.getElementById("MyP4").style.color = "black";
+		document.getElementById("MyH3").style.color = "black";
+		document.getElementById("MyH41").style.color = "black";
+		document.getElementById("MyH42").style.color = "black";
+		document.getElementById("MyH43").style.color = "black";
+		document.getElementById("MyH44").style.color = "black";
+		document.getElementById("MyH45").style.color = "black";
+		document.bgColor = "#ddd"
+	}
+	function WhiteText() {
+		document.getElementById("MyP").style.color = "white";
+		document.getElementById("MyP1").style.color = "white";
+		document.getElementById("MyP2").style.color = "white";
+		document.getElementById("MyP3").style.color = "white";
+		document.getElementById("MyP4").style.color = "white";
+		document.getElementById("MyH3").style.color = "white";
+		document.getElementById("MyH41").style.color = "white";
+		document.getElementById("MyH42").style.color = "white";
+		document.getElementById("MyH43").style.color = "white";
+		document.getElementById("MyH44").style.color = "white";
+		document.getElementById("MyH45").style.color = "white";
+		document.bgColor = "#222629"
+	}
+</script>
+
+<body>
+	<div class="subHeader">
+		<div class="subNav">
+			<img src="images\logoW.png" id="title">
+            <button class="btnHome"><a href="MainPage.html"><i class="fa fa-home"></i>&nbsp; Home</a></button>
+            <button class="btnProducts"><a href="services.html">Services</a></button>
+            <button class="btnOff"><a href="Quiz.html">Offers</a></button>
+            <button class="btnBuy"><a href="buy products.html"><i class="fa fa-shopping-cart"></i>&nbsp; Buy</a></button>
+            <button class="btnInq"><a href="InquiryForm.html"><i class="fa fa-envelope-open"
+                        aria-hidden="true"></i>&nbsp; Inquiry</a></button>
+            <button class="btnDiscover"><a href="sitemap.html">Site map</a></button>
+            <button class="btnAbout"><a href="StudentDetails.html">About Us</a></button>
+		</div>
+	</div>
+	<div class="footer">
+		<a href="danielE.html">Editor's Page >></a>
+	</div>
+	<div class="space"></div>
+	<div class="container">
+		<div class="navbar">
+			<img src="images\logoW.png" class="logo">
+			<nav>
+				<ul>
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">MODE</button>
+							<div class="dropdown-content">
+								<a onclick="WhiteBg()">Light</a>
+								<a onclick="blackBg()">Dark</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">TEXT</button>
+							<div class="dropdown-content">
+								<a onclick="WhiteText()">Light</a>
+								<a onclick="blackTexT()">Dark</a>
+							</div>
+						</div>
+				</ul>
+			</nav>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h1 id="MyH1">Services</h1>
+			</div>
+			<div class="col">
+				<div class="card card1" onclick="document.getElementById('Equipment').scrollIntoView();">
+				</div>
+				<div class="card card2" onclick="document.getElementById('Safety').scrollIntoView();">
+				</div>
+				<div class="card card3" onclick="document.getElementById('Trainers').scrollIntoView();">
+				</div>
+				<div class="card card4" onclick="document.getElementById('Zumba').scrollIntoView();">
+				</div>
+				<div class="card card5" onclick="document.getElementById('123').scrollIntoView();">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="space">
+		<h3 id="MyH3"><u>Explore</u></h3>
+	</div>
+	<div class="details" id="Equipment">
+		<img src="images/Equipment.jpg" class="Big_img">
+		<div class="details_text">
+			<h4 id="MyH41">Equipment</h4>
+			<p id="MyP">We offer World Class Equipment so that you may be able to<br> workout freely to heats content
+				and get those gains up and pumping</p>
+		</div>
+	</div>
+
+	<div class="details" id="Safety">
+		<img src="images/safety.jpg" class="Big_img">
+		<div class="details_text">
+			<h4 id="MyH42">Safety</h4>
+			<p id="MyP1">We follow are safety guidelines very seriously for our safety and yours</p>
+		</div>
+	</div>
+	<div class="details" id="Trainers">
+		<img src="images/trainers.jpg" class="Big_img">
+		<div class="details_text">
+			<h4 id="MyH43">Trainers</h4>
+			<p id="MyP2">We have world classes trainers that would train you absolute precision<br> so that you will be
+				able to get the gains you desire</p>
+		</div>
+	</div>
+	<div class="details" id="Zumba">
+		<img src="images/zumba.jpg" class="Big_img">
+		<div class="details_text">
+			<h4 id="MyH44">Zumba</h4>
+			<p id="MyP3">Not to forget that we have zumba classes for all those<br>who are young and old to keep fit and
+				active and to have fun</p>
+		</div>
+	</div>
+	<div class="details" id="123">
+		<img src="images/123.jpg" class="Big_img">
+		<div class="details_text">
+			<h4 id="MyH45">Meal Plans</h4>
+			<p id="MyP4">We have professionals to help you out with your nutritional needs by providing you
+				with<br>sufficient diet plans</p>
+		</div>
+	</div>
+</body>
+
+</html>

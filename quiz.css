@@ -1,0 +1,140 @@
+
+    /*common Nav Bar*/
+body {margin:0;}
+
+.subNav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+}
+.subNav img{
+	display:inline;
+	width:100px;
+	height:80px;
+	float:left;
+	margin-left:2px;;
+
+}
+.subNav button, a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 17px;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  border: none;
+  background-color:transparent;
+}
+
+.subNav button:hover {
+  background-color:#ccc;
+  color: black;
+}
+
+
+
+	
+/*Footer*/	
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   padding-top: 0px;
+   padding-bottom:4px;
+   font-size: 12px;
+   width: 100%;
+   height:25px;
+   background-color: #222629;
+   color: white;}
+
+.footer a:link, a:visited {
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	font-size:12px;
+	}
+	
+.footer a:active{
+	color: #FAED26;
+	background-color: transparent;}
+
+.footer a:hover{
+	color:#FAED26;}	
+	
+	.questions{
+	font-weight:bold;	
+	}
+	#header{
+	text-align:center;
+	font-family: 'Rock Salt', cursive;	
+	font-size:50px;
+	padding-top:200px;
+	}
+	
+	
+	
+	#timer{
+	
+	font-size: 60px;
+	position:fixed;
+	top:30px;
+	left:80%
+	
+	}
+	
+	#quizDescription{
+		margin-top:80px;
+	}
+	.description{
+	text-align:center;
+	font-size:35px;
+	font-weight:bold;
+	}
+	input[type=button]{
+	font-weight:bold;
+	font-size:40px;
+	margin-left:35%;
+	padding:15px;
+	background-color:#6e9584;
+	color:white;
+	width:400px;	
+	}
+	.field{
+	background-color:#c3c3c3;
+	padding: 5px;
+	margin-bottom:8px;
+    border-radius: 9px;
+	}
+	#quiz{
+	display:none;
+	font-size:20px;
+	margin-left:2rem;
+	margin-right:5rem;	
+	}
+	#result{
+	display:none;
+	text-align:center;
+	width:100%;
+	height:100%;
+	font-size:35px;
+	
+	
+	}
+	#link{
+    position:fixed;
+	top:90%;
+	left:90%;
+	}
+	#link:link{
+    color: #000000;
+	}
+	.emoji{
+		font-size:60px;
+	}
+	#container{
+	margin-top:-100px;}

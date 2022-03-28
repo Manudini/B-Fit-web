@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<title>Inquiry Page</title>
+		<link rel="stylesheet" href="style2.css">
+		<link rel="stylesheet" href="main_stylesheet.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	</head>
+
+<body>
+	<!-- Query Form Header --->
+	<div class="subHeader">
+		<div class="subNav">
+			<img src="images\logoW.png" id="title">
+			<button class="btnHome"><a href="MainPage.html"><i class="fa fa-home"></i>&nbsp; Home</a></</button>
+			<button class="btnProducts"><a href="services.html">Services</a></button>
+			<button class="btnOff"><a href="Quiz.html">Offers</a></button>
+			<button class="btnBuy"><a href="buy products.html"><i class="fa fa-shopping-cart"></i>&nbsp; Buy</a></button>
+			<button class="btnInq"><a href="InquiryForm.html"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp; Inquiry</a></button>
+			<button class="btnDiscover"><a href="sitemap.html">Site Map</a></button>
+			<button class="btnAbout"><a href="StudentDetails.html">About Us</a></button>
+		</div>
+	</div>
+	
+	<!-- Query Form --->	
+	<form name="inqForm" id="query" method="post" action="mailto:user@mail.com" enctype="text/plain" onsubmit="submitForm()">
+
+	<div class="inquiryForm">
+		<h1>Inquiry</h1>
+		<hr>
+		<div class = "formContent">
+		<br>
+			<div class="form-field">
+				<label for=name > Name : </label></br>
+				<input type="text" id="name" name="name" placeholder="Enter your name"></br>
+			</div>
+			
+			<div class="form-field">
+				<label for=email> E-mail : </label></br>
+				<input type="email" id="email" name="email" placeholder="Enter your e-mail"></br>
+			</div>
+			
+			<div class="form-field">
+				<label for=subject> Subject : </label></br>
+					<select id="subject" name="subject">
+						<option value="none" selected>-- Choose an option --</option>
+						<option value="delivery">Delivery</option>
+						<option value="returns">Returns</option>
+						<option value="refunds">Refunds</option>
+						<option value="wholesale">Wholesale Purchasing</option>
+						<option value="other">Other</option>
+					</select></br>
+			</div>
+			
+			<div class="form-field">
+				<label for=details> Details : </label></br>
+				<textarea id="details" name="details" rows="8" cols="40" placeholder="Message"></textarea></br>
+			</div>
+	
+	</div>
+		<button type="button" id="check" onclick = "return validateForm()">View</button>
+	</div>
+	</form>
+	<div id="summary">
+			<p id="summaryTitle"></p></br>
+			<hr>
+			<span id="resultName"></span></br>
+			<span id="resultEmail"></span></br>
+			<span id="resultSubject"></span></br>
+			<span id="resultDetails"></span></br>
+			</br><hr>
+			<div class="summaryBtns">
+			<button type="button" id="inqEdit" onclick = "hideReplaceFunction2()">Edit</button>
+			<input type="submit" id="inqSubmit" form="query" value="Send">
+			</div>
+	</div>
+	<div id="formSent"
+		<p id="fromSent"></p>
+	</div>
+
+	<div class="footer">
+		 <a href="Tharushika.html">Editor's Page >></a>
+	</div>
+
+<script>
+function validateForm() {
+      
+         if( document.inqForm.name.value == "" ) {
+            alert( "Error-> Your name is required !" );
+            document.inquiry-form.name.focus() ;
+            return false;
+         }
+         if( document.inqForm.email.value == "" ) {
+            alert( "Error-> Your Email is required !" );
+            document.inquiry-form.email.focus() ;
+            return false;
+         }
+         if( document.inqForm.subject.value == "none" ) {
+            alert( "Error-> Subject is required !" );
+            return false;
+         }
+		 if( document.inqForm.details.value == "" ) {
+            alert( "Error-> Details field is required !" );
+            return false;
+         }
+         
+		 hideReplaceFunction1();
+		 displaySummary();
+		 	
+      }
+		
+function hideReplaceFunction1() {
+	document.getElementById("query").style.display="none";
+	document.getElementById("summary").style.display="block";
+}
+
+function hideReplaceFunction2() {
+	document.getElementById("query").style.display="block";
+	document.getElementById("summary").style.display="none";
+}
+
+
+function displaySummary() {
+	document.getElementById("summaryTitle").innerHTML = "Your Inquiry Summary";
+	document.getElementById("resultName").innerHTML = "Name &nbsp;&nbsp;&nbsp;&nbsp;:	" + document.inqForm.name.value;
+	document.getElementById("resultEmail").innerHTML = "Email &nbsp;&nbsp;&nbsp;&nbsp;: " + document.inqForm.email.value;
+	document.getElementById("resultSubject").innerHTML = "Subject &nbsp;&nbsp;&nbsp;: " + document.inqForm.subject.value;
+	document.getElementById("resultDetails").innerHTML = "Details &nbsp;&nbsp;&nbsp;: " + document.inqForm.details.value;
+}	
+
+function submitForm() {
+	document.getElementById("summary" ).style.display = "none";  
+	document.getElementById("query" ).style.display = "none";  
+	alert("The inquiry was sent!");
+	document.getElementById("formSent").innerHTML ="Thank You!";
+}
+			
+</script>
+</body>
+</html>
+		
+		
+		
+		

@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+	<title> Quiz </title>
+	<meta charset="UTF-8">
+	  <link rel="stylesheet" href="quiz.css">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">	  	  
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  
+	  
+	<script>
+	     // Setting the timer..
+		var interval;
+		var sec;
+		var score=0;
+		var count=0;
+		var q1,q2,q3,q4,q5,q6,q7,q8,q9,q10;
+		function getRadioValue(radioArray){
+	     var i;
+	      for(i=0;i<radioArray.length;i++){
+		      if(radioArray[i].checked){
+			    return radioArray[i].value;
+			  }
+			}
+			return "";
+		}
+		function onClick(){
+			sec = 30;
+			interval = setInterval(function(){
+			document.getElementById('timer').innerHTML="00: "+sec;
+			sec--;
+			if (sec === -02){
+				clearInterval(interval);
+				document.getElementById('timer').innerHTML="00:00 ";
+				document.getElementById("quizForm").style.display="none";
+				alert("You're out of time! Please click Done button if you want to know your score.");
+				 q1=getRadioValue(frmref.quiz1);
+				 q2=getRadioValue(frmref.quiz2);
+				 q3=getRadioValue(frmref.quiz3);
+				 q4=getRadioValue(frmref.quiz4);
+				 q5=getRadioValue(frmref.quiz5);
+				 q6=getRadioValue(frmref.quiz6);
+				 q7=getRadioValue(frmref.quiz7);
+				 q8=getRadioValue(frmref.quiz8);
+				 q9=getRadioValue(frmref.quiz9);
+				 q10=getRadioValue(frmref.quiz10);
+				//cheking if the selected values are equal to the correct answers and counting the score..
+				
+				if(q1=="Pectorals"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q2=="WilliamBonac"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				
+				if(q3=="optB"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q4=="GM"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q5=="age2"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q6=="Proteins"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q7=="Pullup"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q8=="Foamroller"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q9=="weight3"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				if(q10=="exc1"){
+				score=score+2;
+				count++;
+				}
+				else{
+				score=score-1;
+				}
+				
+				
+				var wrongAnswers=10-count;
+				document.getElementById("result").style.backgroundColor="gray";
+				document.getElementById("result").innerHTML="Your Score:"+(score)+"<br/>Number of Questions:10<br/> Number of correct Answers:"  +(count)+"<br/>Number of wrong Answers:"+(wrongAnswers)+"<br/>Sorry!!! "+"<p class='emoji'>&#128577;</p>";
+				
+				
+				document.getElementById("result").style.display="block";
+				//document.getElementById("quizForm").style.display="none";
+				//giving an alert when the time is over..
+				
+				
+				
+				
+				}
+				
+			}, 1000);
+		   
+		   document.getElementById("quiz").style.display="block";
+		   document.getElementById("quizDescription").style.display="none";
+		   }
+		   
+		  //getting the checked radio values.. 
+		
+		// creating the function to assign the selected values to variables and counting the score...
+		
+		function mark(frmref){
+		    
+		     q1=getRadioValue(frmref.quiz1);
+			 q2=getRadioValue(frmref.quiz2);
+			 q3=getRadioValue(frmref.quiz3);
+			 q4=getRadioValue(frmref.quiz4);
+			 q5=getRadioValue(frmref.quiz5);
+			 q6=getRadioValue(frmref.quiz6);
+			 q7=getRadioValue(frmref.quiz7);
+			 q8=getRadioValue(frmref.quiz8);
+			 q9=getRadioValue(frmref.quiz9);
+			 q10=getRadioValue(frmref.quiz10);
+			//cheking if the selected values are equal to the correct answers and counting the score..
+			clearInterval(interval);
+			if(q1=="Pectorals"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q2=="WilliamBonac"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			
+			if(q3=="optB"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q4=="GM"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q5=="age2"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q6=="Proteins"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q7=="Pullup"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q8=="Foamroller"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q9=="weight3"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+			if(q10=="exc1"){
+			score=score+2;
+			count++;
+			}
+			else{
+			score=score-1;
+			}
+				
+			    //setting the background colour according to the score..
+			    if (score==20){
+				  var wrongAnswers=0;
+				  document.getElementById("result").style.backgroundColor="green";
+				  document.getElementById("result").innerHTML= "<br/>Number of Questions:10<br/> Number of correct Answers:"  +(count)+"<br/>Number of wrong Answers:"+(wrongAnswers)+"<br/> Time spent:"  +(59-sec)+
+				  "<br/><b>Congratulations!!! <br/>You have answered all of the questions correctly</b>"+"<br/>Use this promo code to get a 25% discount on your total bill.<br/>"+"<br/><b>#567-456-123&</b>"+"<p class='emoji'>&#129321;</p>";
+				 } 
+		        else if(score==17){
+				 var wrongAnswers=10-count;
+				 document.getElementById("result").style.backgroundColor="purple";
+				 document.getElementById("result").innerHTML="Your Score:"+(score)+"<br/>Number of Questions:10<br/> Number of correct Answers:"  +(count)+"<br/>Number of wrong Answers:"+(wrongAnswers)+"<br/> Time spent:"  +(59-sec)+"<br/>Good attempt! "+"<p class='emoji'>&#128512;</p>";
+				 }	
+				 else if(score<=0){
+				 var wrongAnswers=10-count;
+				 document.getElementById("result").style.backgroundColor="#e73a3a";
+				 document.getElementById("result").innerHTML="Your Score:"+(score)+"<br/>Number of Questions:10<br/> Number of correct Answers:"  +(count)+"<br/>Number of wrong Answers:"+(wrongAnswers)+"<br/> Time spent:"  +(59-sec)+"<br/>Sorry!!! "+"<p class='emoji'>&#128577;</p>";
+				 }
+				
+				
+				else{
+				var wrongAnswers=10-count;
+				 document.getElementById("result").style.backgroundColor="pink";
+				 document.getElementById("result").innerHTML="Your Score:"+(score)+"<br/>Number of Questions:10<br/> Number of correct Answers:"  +(count)+"<br/>Number of wrong Answers:"+(wrongAnswers)+"<br/> Time spent:"  +(59-sec)+"<br/>Sorry!!! "+"<p class='emoji'>&#128577;</p>";
+				 }	
+			    
+				document.getElementById("result").style.display="block";
+				document.getElementById("quizForm").style.display="none";
+				
+			
+		}
+				
+		
+	</script>
+	
+	</head>
+	  
+	<body>
+	    <div class="subHeader">
+		<div class="subNav">
+			<img src="images\logoW.png" id="title">
+			<button class="btnHome"><a href="MainPage.html"><i class="fa fa-home"></i>&nbsp; Home</a></</button>
+			<button class="btnProducts"><a href="services.html">Services</a></button>
+			<button class="btnOffer"><a href="Quiz.html">Offers</a></button>
+			<button class="btnBuy"><a href="buy products.html"><i class="fa fa-shopping-cart"></i>&nbsp; Buy</a></button>
+			<button class="btnInq"><a href="InquiryForm.html"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp; Inquiry</a></button>
+			<button class="btnDiscover"><a href="sitemap.html">Site Map</a></button>
+			<button class="btnAbout"><a href="StudentDetails.html">About Us</a></button>
+		</div>
+       </div>
+	    
+	     
+	      <div id="container">
+	      <h1 id="header">SPECIAL OFFER  QUIZ</h1>
+	      <div id="quizForm">
+		    <div id ="quizDescription">
+		        <p class="description">Win a chance to get a 25% Discount to your bill by winning this quiz</p>
+		        <p class="description">Click here to start the quiz now !!!</p>
+		         <br/>
+		
+		        <input type="button" name="click here" value="Click Here" onclick="onClick()"><br/>
+			</div>	
+	    <div id="quiz">
+		 <form name="quiz" >
+		 
+		 <br/>
+		 <p id="timer">01:00</p>
+	     <div class="field">
+	     <p><b>01)What are the chest Muscles called?</b></p><br>  
+	  
+			<input type="radio" name="quiz1" value="Abdominals" id="quiz1-1">
+			<label for ="quiz1-1">A. Abdominals</label><br>
+			<input type="radio" name="quiz1" value="Biceps" id="quiz1-2">
+			<label for ="quiz1-2">B. Biceps</label><br>
+			<input type="radio" name="quiz1" value="Pectorals" id="quiz1-3">
+			<label for ="quiz1-3">C. Pectorals</label><br>
+			<input type="radio" name="quiz1" value="Deltoids" id="quiz1-4">
+			<label for ="quiz1-4">D. Deltoids</label>
+			
+		 </div>
+		 <div class="field">
+		 <p><b>02)Who won the last year(2020) Arnold Classic  ?</b></p><br>  
+	   
+			<input type="radio" name="quiz2" value="MorganAste" id="quiz2-1">
+			<label for ="quiz2-1">A. Morgan Aste</label><br>
+			<input type="radio" name="quiz2" value="SteveKuclo" id="quiz2-2">
+			<label for ="quiz2-2">B. Steve Kuclo</label><br>
+			<input type="radio" name="quiz2" value="KaiGreene" id="quiz2-3">
+			<label for ="quiz2-3">C. Kai Greene</label><br>
+			<input type="radio" name="quiz2" value="WilliamBonac" id="quiz2-4">
+			<label for ="quiz2-4">D. William Bonac</label>
+			
+		 </div>
+		 <div class="field">
+		 <p><b>03)When lifting heavy weights from the floor,what is the correct technique?</b></p><br>  
+	   
+			<input type="radio" name="quiz3" value="optA" id="quiz3-1">
+			<label for ="quiz3-1">A. Bent legs, bent back</label><br>	   
+			<input type="radio" name="quiz3" value="optB" id="quiz3-2">
+			<label for ="quiz3-2">B. Bent legs,Straight back</label><br>	   
+			<input type="radio" name="quiz3" value="optC" id="quiz3-3">
+			<label for ="quiz3-3">C. Straight legs,bent back</label><br>	  
+			<input type="radio" name="quiz3" value="optD" id="quiz3-4">
+			<label for ="quiz3-4">D. Straight legs,Straight back</label>
+			
+		 </div>
+		 <div class="field">		
+		
+		 <p><b>04)What is the largest muscle in the body?</b></p><br>  
+	   
+	        <input type="radio" name="quiz4" value="GM" id="quiz4-1">
+		    <label for ="quiz4-1">A. Gluteus Maximus</label><br>
+			<input type="radio" name="quiz4" value="BCS" id="quiz4-2">
+	        <label for ="quiz4-2">B. Biceps</label><br>	   
+	        <input type="radio" name="quiz4" value="PTS" id="quiz4-3">
+		    <label for ="quiz4-3">C. Pectorals</label><br>	   
+	        <input type="radio" name="quiz4" value="AMS" id="quiz4-4">
+		    <label for ="quiz4-4">D. Abdominals</label>
+		    
+		 </div>
+		 <div class="field">
+		 <p><b>05)What is the average resting heart rate for the average 18-25-year-old?</b></p><br>  
+	   
+	        <input type="radio" name="quiz5" value="age1" id="quiz5-1">
+		    <label for ="quiz5-1">A. 82+</label><br>	   
+	        <input type="radio" name="quiz5" value="age2" id="quiz5-2">
+		    <label for ="quiz5-2">B. 70-73</label><br>	   
+	        <input type="radio" name="quiz5" value="age3" id="quiz5-3">
+		    <label for ="quiz5-3">C. 62-65</label><br>	   
+	        <input type="radio" name="quiz5" value="age4" id="quiz5-4">
+		    <label for ="quiz5-4">D. 49-55</label>
+		    
+		 </div>
+		 <div class="field">
+		   <p><b>06)What nutrients should be consumed after a gym workout to help the body recover faster?</b></p><br>  
+	   
+			<input type="radio" name="quiz6" value="Carbohydrates" id="quiz6-1">
+			<label for ="quiz6-1">A. Carbohydrates</label><br>   
+			<input type="radio" name="quiz6" value="Fats" id="quiz6-2">
+			<label for ="quiz6-2">B. Fats</label><br>	   
+			<input type="radio" name="quiz6" value="Proteins" id="quiz6-3">
+			<label for ="quiz6-3">C. Proteins</label><br>	   
+			<input type="radio" name="quiz6" value="FishOil" id="quiz6-4">
+			<label for ="quiz6-4">D. Fish Oil</label>
+			
+		 </div>
+		 <div class="field">
+		  <p><b>07)Which one of these exercises targets the back more than the others?</b></p><br>  
+	   
+			<input type="radio" name="quiz7" value="Squat" id="quiz7-1">
+			<label for ="quiz7-1">A. Squat</label><br>	   
+			<input type="radio" name="quiz7" value="Overheadpress" id="quiz7-2">
+			<label for ="quiz7-2">B. Overhead press</label><br>	   
+			<input type="radio" name="quiz7" value="Pushups" id="quiz7-3">
+			<label for ="quiz7-3">C. Push ups</label><br>	   
+			<input type="radio" name="quiz7" value="Pullup" id="quiz7-4">
+			<label for ="quiz7-4">D. Pull up</label>
+			
+		 </div>
+		 <div class="field">
+		    <p><b>08)This exercise tool uses own body weight to loosen tight muscles and improve blood flow</b></p><br>  
+	  
+			<input type="radio" name="quiz8" value="Stabilityball" id="quiz8-1">
+			<label for ="quiz8-1">A. Stability ball</label><br>	  
+			<input type="radio" name="quiz8" value="Foamroller" id="quiz8-2">
+			<label for ="quiz8-2">B. Foam roller</label><br>	  
+			<input type="radio" name="quiz8" value="Resistanceband" id="quiz8-3">
+			<label for ="quiz8-3">C. Resistance band</label><br>	   
+			<input type="radio" name="quiz8" value="Exercisemat" id="quiz8-4">
+			<label for ="quiz8-4">D. Exercise mat</label>
+			
+		  </div>
+		  <div class="field">
+		   <p><b>09)How much protein does an <i>average </i>male need per day ?</b></p><br>  
+	   
+			<input type="radio" name="quiz9" value="weight1" id="quiz9-1">
+			<label for ="quiz9-1">A. (1.2 grams per kg)of body weight</label><br>	   
+			<input type="radio" name="quiz9" value="weight2" id="quiz9-2">
+			<label for ="quiz9-2">B. (0.6 grams per kg)of body weight</label><br>	   
+			<input type="radio" name="quiz9" value="weight3" id="quiz9-3">
+			<label for ="quiz9-3">C. (0.8 grams per kg)of body weight</label><br>	  
+			<input type="radio" name="quiz9" value="weight4" id="quiz9-4">
+			<label for ="quiz9-4">D. (1.0 grams per kg)of body weight</label>
+			
+		  </div>
+		  <div class="field">
+		   <p><b>10)Which one of these exercises targets the legs more than the others?</b></p><br>  
+	   
+			<input type="radio" name="quiz10" value="exc1" id="quiz10-1">
+			<label for ="quiz10-1">A. Lunges</label><br>	   
+			<input type="radio" name="quiz10" value="exc2" id="quiz10-2">
+			<label for ="quiz10-2">B. Bent over rows</label><br>	  
+			<input type="radio" name="quiz10" value="exc3" id="quiz10-3">
+			<label for ="quiz10-3">C. Side lateral raises</label><br>	   
+			<input type="radio" name="quiz10" value="exc4" id="quiz10-4">
+			<label for ="quiz10-4">D. Crunches</label>
+			
+	      </div>
+		  <a id="link" href="#header">Back to top</a>
+		    <br/>
+		  <input type="button" id="submit" name="done" value="Done" onclick="mark(this.form)"> 
+	  	  
+	      </form>
+		  
+	   </div>
+	   
+	  </div> 			
+	 </div> 
+	   
+	 <div id="result"></div>  
+	 <div class="footer">
+	 <a href="manudini.html">Editor's Page >></a>
+	 </div>
+	
+	</body>
+
+
+</html>

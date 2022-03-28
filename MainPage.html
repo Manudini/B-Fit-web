@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>B-FIT</title>
+		<link rel="stylesheet" href="style2.css">
+		<link rel="stylesheet" href="main_stylesheet.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body id="main">
+	<div class="box-area">
+		<header>
+			<div class="wrapper">
+				<div class="logo">
+					<img src="images\logoW.png" id="title" name="top">
+				</div>
+				<nav>
+					<button class="btnHome"><a href="MainPage.html"><i class="fa fa-home"></i>&nbsp; Home</a></</button>
+					<button class="btnProducts"><a href="services.html">Services</a></button>
+					<button class="btnOff"><a href="Quiz.html">Offers</a></button>
+					<button class="btnBuy"><a href="buy products.html"><i class="fa fa-shopping-cart"></i>&nbsp; Buy</a></button>
+					<button class="btnInq"><a href="InquiryForm.html"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp; Inquiry</a></button>
+					<button class="btnDiscover"><a href="sitemap.html">Site Map</a></button>
+					<button class="btnAbout"><a href="StudentDetails.html">About Us</a></button>
+				</nav>
+			</div>
+		</header>
+		<div class="banner-area">
+			<h1><b>B - FIT</b></h1>
+		</div>
+		<div class="content">
+			<div class="wrapper">
+				<h2>~ The Largest Retail Gym Equipment Center ~</h2>
+					
+					<!--Image Grid & Quiz button-->
+				<div class="imageGrid">
+					<table class="imageTable">
+						<tr>
+							<td><img src="images\dumbellset.jpg"></td>
+							<td><img src="images\skiprope.jpg"></td>
+							<td><img src="images\Rack.png"></td>
+
+							<td class="yellowbg" colspan="4"><button class="btnOffer"><a href="Quiz.html">SPECIAL OFFER<br>QUIZ</a></button></td>
+						
+							<td><img src="images\gloves.jpg"></td>
+							<td><img src="images\cycle.jpg"></td>
+							<td><img src="images\bench2.jpg"></td>
+						</tr>
+					</table></br>
+				</div>
+				
+				
+				<!--Image Slideshow-->
+					<div class="imageSlideshow" align="left">
+							<div class="slideImg fade">
+							  <img src="images\1.jpg">
+							</div>
+
+							<div class="slideImg fade">
+							  <img src="images\3.jpg">
+							</div>
+
+							<div class="slideImg fade">
+							  <img src="images\2.jpg">
+							</div>
+
+							<div class="dots">
+							  <span class="dot"></span> 
+							  <span class="dot"></span> 
+							  <span class="dot"></span> 
+							</div>
+					</div>
+			</div>
+		</div>
+		<button id="goTop"><a href="#top">Top</a></button>
+	</div>
+<div class="footer">
+		 <a href="Tharushika.html">Editor's Page >></a>
+</div>
+
+	
+	
+<script>
+var slideIndex = 0;
+showSlides();
+
+	function showSlides() {
+	  var i;
+	  var slides = document.getElementsByClassName("slideImg");
+	  var dots = document.getElementsByClassName("dot");
+	  
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+</body>
+</html>
